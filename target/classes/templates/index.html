@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${name} + ' - Portfolio'">Tanishq Saini - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">TS.</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="material-icons">menu</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="d-flex align-items-center min-vh-100 bg-light">
+        <div class="container text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h1 class="display-3 fw-bold text-dark mb-3" th:text="${name}">Tanishq Saini</h1>
+                    <h2 class="h4 text-muted mb-4">Computer Applications Undergraduate</h2>
+                    <p class="lead mb-4 text-secondary">Passionate about building full-stack web applications, APIs, and engaging game experiences.</p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                        <a href="#projects" class="btn btn-primary btn-lg rounded-pill px-4 shadow-sm">View Work</a>
+                        <a href="https://github.com/tanishq-sa" target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4 d-flex align-items-center gap-2">
+                            <span class="material-icons">code</span> GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-5 mt-5 mt-md-0 d-none d-md-block text-center">
+                    <div class="hero-shape bg-gradient-primary rounded-circle shadow-lg mx-auto d-flex align-items-center justify-content-center">
+                        <span class="material-icons text-white" style="font-size: 120px;">developer_mode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">About Me</h2>
+                <div class="divider bg-primary mx-auto"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="fs-5 text-secondary">
+                        I am a dedicated Computer Applications undergraduate currently pursuing my degree at Christ University. 
+                        With a strong foundation in modern web development, backend systems, and game development, 
+                        I thrive on solving complex problems and creating intuitive digital experiences.
+                    </p>
+                    <div class="d-flex justify-content-center gap-4 mt-4 text-muted">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="material-icons text-primary">location_on</span>
+                            <span>Ghaziabad, India</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="material-icons text-primary">email</span>
+                            <span>tanishqsaini872@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">Education</h2>
+                <div class="divider bg-primary mx-auto"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="timeline">
+                        <div class="card border-0 shadow-sm mb-4 material-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
+                                    <h4 class="card-title fw-bold mb-0">Bachelor of Computer Applications</h4>
+                                    <span class="badge bg-primary-soft text-primary px-3 py-2 rounded-pill mt-2 mt-sm-0">2024 &ndash; 2028</span>
+                                </div>
+                                <h6 class="text-muted mb-3 d-flex align-items-center gap-2">
+                                    <span class="material-icons fs-5">school</span> Christ University, Pune Lavasa
+                                </h6>
+                            </div>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm material-card">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
+                                    <h4 class="card-title fw-bold mb-0">Commerce with Computer Science</h4>
+                                    <span class="badge bg-primary-soft text-primary px-3 py-2 rounded-pill mt-2 mt-sm-0">High School</span>
+                                </div>
+                                <h6 class="text-muted mb-0 d-flex align-items-center gap-2">
+                                    <span class="material-icons fs-5">school</span> D.A.V. Public School
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-5">
+        <div class="container py-5">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">Experience</h2>
+                <div class="divider bg-primary mx-auto"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm material-card border-start border-4 border-primary">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="d-flex justify-content-between align-items-start flex-wrap mb-3">
+                                <div>
+                                    <h3 class="card-title fw-bold text-dark mb-1">Game Developer Intern</h3>
+                                    <h5 class="text-primary mb-0 d-flex align-items-center gap-2">
+                                        <span class="material-icons fs-5">business</span> Eklavya.me
+                                    </h5>
+                                </div>
+                                <span class="badge bg-light text-dark border px-3 py-2 rounded-pill mt-2 mt-sm-0">
+                                    <span class="material-icons fs-6 align-text-bottom me-1">calendar_today</span> June 2025 &ndash; Sept 2025
+                                </span>
+                            </div>
+                            
+                            <ul class="text-secondary mt-4 list-unstyled experience-list">
+                                <li class="mb-3 d-flex">
+                                    <span class="material-icons text-primary me-2 fs-5 mt-1">check_circle</span>
+                                    <span>Worked on 5+ LMS games including Riddle, Word Search, Alphabet, Unscramble, and Matching.</span>
+                                </li>
+                                <li class="d-flex">
+                                    <span class="material-icons text-primary me-2 fs-5 mt-1">check_circle</span>
+                                    <span>Used React, TypeScript, Tailwind, JSON configurations, Git PR workflows, Zoho Sprints, and Notion.</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="mt-4 d-flex flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border">React</span>
+                                <span class="badge bg-light text-dark border">TypeScript</span>
+                                <span class="badge bg-light text-dark border">Tailwind</span>
+                                <span class="badge bg-light text-dark border">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">Featured Projects</h2>
+                <div class="divider bg-primary mx-auto"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm material-card">
+                        <div class="card-header bg-white border-0 pt-4 pb-0">
+                            <div class="icon-box bg-primary-soft text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" style="width: 60px; height: 60px;">
+                                <span class="material-icons fs-2">api</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Quotify API</h4>
+                            <p class="card-text text-secondary">
+                                Secure monetized quote API featuring API key authentication, usage tracking, rate limiting, category filtering, and seamless Razorpay subscription integration.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-4 pt-0">
+                            <a href="https://quotify.dazzelr.tech" target="_blank" class="btn btn-outline-primary rounded-pill d-inline-flex align-items-center gap-1">
+                                <span class="material-icons fs-6">open_in_new</span> Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm material-card">
+                        <div class="card-header bg-white border-0 pt-4 pb-0">
+                            <div class="icon-box bg-purple-soft text-purple rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" style="width: 60px; height: 60px;">
+                                <span class="material-icons fs-2">image</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Dazzelr Image Converter</h4>
+                            <p class="card-text text-secondary">
+                                SaaS image conversion platform with interactive user dashboards, secure authentication, subscription-based feature access, deployed to production.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-4 pt-0">
+                            <a href="https://dazzelr.tech" target="_blank" class="btn btn-outline-purple rounded-pill d-inline-flex align-items-center gap-1">
+                                <span class="material-icons fs-6">open_in_new</span> Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm material-card">
+                        <div class="card-header bg-white border-0 pt-4 pb-0">
+                            <div class="icon-box bg-dark-soft text-dark rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" style="width: 60px; height: 60px;">
+                                <span class="material-icons fs-2">headphones</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Discord Music Bot</h4>
+                            <div class="mb-2">
+                                <span class="badge bg-success-soft text-success rounded-pill">20K+ Servers</span>
+                                <span class="badge bg-success-soft text-success rounded-pill">1M+ Users</span>
+                            </div>
+                            <p class="card-text text-secondary">
+                                High-performance music streaming bot with advanced command handling, dynamic queue system, and event-driven architecture. Scaled successfully from 2019 to 2023.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-4 pt-0">
+                            <span class="text-muted small"><span class="material-icons fs-6 align-text-bottom">history</span> 2019 - 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5">
+        <div class="container py-5">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">Technical Skills</h2>
+                <div class="divider bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm material-card">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-4 d-flex align-items-center gap-2">
+                                <span class="material-icons text-primary">code</span> Languages
+                            </h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border px-3 py-2">C++</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Python</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">JavaScript</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">C#</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm material-card">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-4 d-flex align-items-center gap-2">
+                                <span class="material-icons text-purple">web</span> Frontend
+                            </h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border px-3 py-2">HTML5</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">CSS3</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">React.js</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Next.js</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">React Router</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm material-card">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-4 d-flex align-items-center gap-2">
+                                <span class="material-icons text-success">dns</span> Backend & Auth
+                            </h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border px-3 py-2">Node.js</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Express.js</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">REST APIs</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Clerk</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Firebase Auth</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Discord.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm material-card">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-4 d-flex align-items-center gap-2">
+                                <span class="material-icons text-warning">storage</span> Database
+                            </h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border px-3 py-2">MySQL</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">MongoDB</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Mongoose</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Firebase</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Firestore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm material-card">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-4 d-flex align-items-center gap-2">
+                                <span class="material-icons text-danger">build</span> Tools & Game Dev
+                            </h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border px-3 py-2">Git</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">GitHub</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Vercel</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Netlify</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Postman</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">Unity</span>
+                                <span class="badge bg-light text-dark border px-3 py-2">2D Game Dev</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container py-5 text-center">
+            <h2 class="fw-bold mb-4">Let's Connect</h2>
+            <p class="lead mb-5 opacity-75">I'm currently looking for new opportunities. My inbox is always open.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="mailto:tanishq.saini@icloud.com" class="btn btn-primary btn-lg rounded-pill px-4 shadow">
+                    <span class="material-icons align-text-bottom me-1">email</span> Say Hello
+                </a>
+                <a href="https://github.com/tanishq-sa" target="_blank" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                    <span class="material-icons align-text-bottom me-1">code</span> GitHub
+                </a>
+            </div>
+        </div>
+        <div class="container text-center mt-5 pt-4 border-top border-secondary">
+            <p class="mb-0 opacity-50 small">&copy; 2026 Tanishq Saini. Built with Spring Boot.</p>
+        </div>
+    </section>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
